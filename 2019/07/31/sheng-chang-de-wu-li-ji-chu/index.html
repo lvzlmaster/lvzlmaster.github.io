@@ -1,0 +1,977 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="声场的物理基础, 吕之国">
+    <meta name="description" content="日常生活、学习记录、教程资源">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>声场的物理基础 | 吕之国</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">吕之国</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">吕之国</div>
+        <div class="logo-desc">
+            
+            日常生活、学习记录、教程资源
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">声场的物理基础</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%A3%B0%E5%9C%BA/">
+                                <span class="chip bg-color">声场</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%89%A9%E7%90%86/">
+                                <span class="chip bg-color">物理</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-07-31
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="声场的物理基础"><a href="#声场的物理基础" class="headerlink" title="声场的物理基础"></a>声场的物理基础</h1><h2 id="1-波动方程"><a href="#1-波动方程" class="headerlink" title="1 波动方程"></a>1 波动方程</h2><p>时域下，无源场的波动方程为</p>
+<script type="math/tex; mode=display">
+\nabla^2s(\mathbf{x},t)-\frac{1}{c^2}\frac{\partial^2s(\mathbf{x},t)}{\partial t^2}=0</script><p>对等式两边同时取对时间的傅里叶变换，可得亥姆霍兹方程</p>
+<script type="math/tex; mode=display">
+\nabla^2S(\mathbf{x},\omega)+k^2S(\mathbf{x},\omega)=0</script><p>其中，$k$被称为波数，与角频率的关系为</p>
+<script type="math/tex; mode=display">
+k^2=(\frac{\omega}{c})^2</script><h3 id="1-1-笛卡尔坐标系下的解"><a href="#1-1-笛卡尔坐标系下的解" class="headerlink" title="1.1 笛卡尔坐标系下的解"></a>1.1 笛卡尔坐标系下的解</h3><p>亥姆霍兹方程在笛卡尔坐标系下的解为</p>
+<script type="math/tex; mode=display">
+S(\mathbf{x},\omega)=\hat{S}(\omega)e^{-i(k_xx+k_yy+k_zz)}=\hat{S}(\omega)e^{-i\mathbf{k}^T\mathbf{x}}</script><p>其中，波数满足关系</p>
+<script type="math/tex; mode=display">
+k^2=k_x^2+k_y^2+k_z^2</script><p>据此可得</p>
+<script type="math/tex; mode=display">
+k_y=\begin{cases}\pm \sqrt{k^2-k_x^2-k_z^2} & for \ k^2\ge k_x^2+k_z^2 \\ \pm i\sqrt{k_x^2+k_z^2-k^2} & for\ k_x^2+k_z^2\ge k^2\end{cases}</script><p>第二种情况下的解被称为倏逝波或衰减波(evanescent wave)</p>
+<script type="math/tex; mode=display">
+S_{pw}(\mathbf{x},\omega)=\hat{S}_{pw}(\omega)e^{\pm\sqrt{k_x^2+k_z^2-k^2}y}e^{-i(k_{pw,x}x+k_{pw,z}z)}</script><h3 id="1-2-球坐标系下的解"><a href="#1-2-球坐标系下的解" class="headerlink" title="1.2 球坐标系下的解"></a>1.2 球坐标系下的解</h3><p>采用分离变量法</p>
+<script type="math/tex; mode=display">
+S(\mathbf{x},\omega)=\Pi(r)\Theta(\alpha)\Phi(\beta)</script><p>其中，径向解可由$n$阶球贝塞尔函数$j_n(kr)$和球诺伊曼函数$y_n(kr)$表示，也可以由一阶和二阶球汉克尔函数表示</p>
+<script type="math/tex; mode=display">
+h_n^{(1,2)}(\frac{\omega}{c}r)=j_n(\frac{\omega}{c}r)\pm iy_n(\frac{\omega}{c}r)</script><script type="math/tex; mode=display">
+h_n^{(1,2)}(\frac{\omega}{c}r)\approx(\mp)^nh_0^{1,2}(\frac{\omega}{c}r)\ \ for\ \forall \frac{\omega}{c}r \to +\infty</script><p>方位角上的解$\Theta(\alpha)$由复指数函数$e^{im\alpha},\ m\in \mathbb{Z}$表示，极角解可由关联勒让德函数$P_n^m(cos\beta)$给出。将亥姆霍兹方程的角度变量解结合并归一化，可得球谐函数</p>
+<script type="math/tex; mode=display">
+Y_n^m(\beta,\alpha)=(-1)^m\sqrt{\frac{2n+1}{4\pi}\frac{(n-|m|)!}{(n+|m|)!}}P^{|m|}_n(cos\beta)e^{im\alpha}</script><h2 id="2-声场的表示"><a href="#2-声场的表示" class="headerlink" title="2 声场的表示"></a>2 声场的表示</h2><h3 id="2-1-球谐函数展开"><a href="#2-1-球谐函数展开" class="headerlink" title="2.1 球谐函数展开"></a>2.1 球谐函数展开</h3><p>球谐函数是亥姆霍兹方程的一组完备正交解</p>
+<script type="math/tex; mode=display">
+S(\mathbf{x},\omega)=\sum^\infty_{n=0}\sum^{n}_{m=-n}\mathring{S}_n^m(r,m)Y_n^m(\beta,\alpha)</script><p>这种二维序列是归一化的傅里叶序列，也被称为拉普拉斯序列。</p>
+<h3 id="2-2-内部域问题和外部域问题"><a href="#2-2-内部域问题和外部域问题" class="headerlink" title="2.2 内部域问题和外部域问题"></a>2.2 内部域问题和外部域问题</h3><p>内部域问题是指，目标区域是没有任何声源及障碍的区域，所有声源及障碍均位于目标区域之外。外部域问题是指所有声源及障碍均位于目标区域之内。</p>
+<p>对于内部域$\Omega_i$，有</p>
+<script type="math/tex; mode=display">
+S_i(\mathbf{x},\omega)=\sum_{n=0}^\infty\sum_{m=-n}^n\breve{S}_{n,i}^m(\omega)j_n(\frac{\omega}{c}r)Y^m_n(\beta,\alpha)</script><p>其中</p>
+<script type="math/tex; mode=display">
+\breve{S}^m_{n,i}(\omega)=\frac{1}{j_n(\frac{\omega}{c}r)}\int^{2\pi}_0\int^{\pi}_0S(\mathbf{x},\omega)Y_n^{-m}(\beta,\alpha)sin\beta d\beta\alpha</script><p>对于外部域$\Omega_e$，有</p>
+<script type="math/tex; mode=display">
+S_e(\mathbf{x},\omega)=\sum^\infty_{n=0}\sum^n_{m=-n}\breve{S}_{n,e}^m(\omega)h_n^{(2)}(\frac{\omega}{c}r)Y_n^m(\beta,\alpha)</script><p>将球谐函数代入上式（内部域），得</p>
+<script type="math/tex; mode=display">
+S(\mathbf{x},\omega)=\sum^{\infty}_{m=-\infty}\underbrace{\sum^{\infty}_{n=|m|}\breve{S}_n^m(\omega)j_n(\frac{\omega}{c}r)(-1)^m\sqrt{\frac{2n+1}{4\pi}\frac{(n-|m|)!}{(n+|m|)!}}P^{|m|}_n(cos\beta)}_{=\mathring{S}_m(r,\beta,\omega)}e^{im\alpha}</script><p>可以视为傅里叶级数，$e^{im\alpha}$为傅里叶级数得正交基，则</p>
+<script type="math/tex; mode=display">
+\mathring{S}_m(r,\beta,\omega)=\frac{1}{2\pi}\int^{2\pi}_0S(\mathbf{x},\omega)e^{-im\alpha}d\alpha</script><p>总结：</p>
+<p>球面波的内部域球谐函数表示：$\forall r\lt r_s$，声波从$(r_s,\alpha_s,\beta_s)$向外辐射</p>
+<script type="math/tex; mode=display">
+\frac{e^{-i\frac{\omega}{c}|\mathbf{x}-\mathbf{x}_s|}}{|\mathbf{x}-\mathbf{x}_s|}=\sum^\infty_{n=0}\sum^n_{m=-n}\underbrace{(-i)\frac{\omega}{c}h^{(2)}_n(\frac{\omega}{c}r_s)Y^{-m}_n(\beta_s,\alpha_s)}_{=\breve{S}^m_{n,sw,i}}j_n(\frac{\omega}{c}r)Y^m_n(\beta,\alpha)</script><p>球面波得外部域球谐函数表示：$\forall r\gt r_s$，声波从外向点$(r_s,\alpha_s,\beta_s)$辐射</p>
+<script type="math/tex; mode=display">
+\frac{e^{-i\frac{\omega}{c}|\mathbf{x}-\mathbf{x}_s|}}{|\mathbf{x}-\mathbf{x}_s|}=\sum^\infty_{n=0}\sum^n_{m=-n}\underbrace{(-i)\frac{\omega}{c}j_n(\frac{\omega}{c}r_s)Y^{-m}_n(\beta_s,\alpha_s)}_{=\breve{S}^m_{n,sw,e}}h^{(2)}_n(\frac{\omega}{c}r)Y^m_n(\beta,\alpha)</script><p>对于沿$(\theta_{pw},\phi_{pw})$方向传播得平面波，可表达为</p>
+<script type="math/tex; mode=display">
+e^{-i\mathbf{k}^T_{pw}\mathbf{x}}=\sum^\infty_{n=0}\sum^n_{m=-n}\underbrace{4\pi i^{-n}Y^{-m}_n(\phi_{pw},\theta_{pw})}_{=\breve{S}^m_{n,pw}}j_n(\frac{\omega}{c}r)Y^m_n(\beta,\alpha)</script><h3 id="2-3-带限球谐级数"><a href="#2-3-带限球谐级数" class="headerlink" title="2.3 带限球谐级数"></a>2.3 带限球谐级数</h3><p>考虑带限的级数展开（球谐级数在$N\gt N_{min}$时一致收敛）</p>
+<script type="math/tex; mode=display">
+S(\mathbf{x},\omega)\approx \sum^{N-1}_{n=0}\sum^n_{m=-n}\mathring{S}^m_n(r,\omega)Y^m_n(\beta,\alpha)</script><h4 id="2-3-1-内部展开"><a href="#2-3-1-内部展开" class="headerlink" title="2.3.1 内部展开"></a>2.3.1 内部展开</h4><p>内部展开的属性可以描述为：低阶展开可视为离展开中心较近的声场，高阶展开可视为距展开中心较远的声场。</p>
+<p>带限声场球贝塞尔函数的宗量要小于最高阶数</p>
+<script type="math/tex; mode=display">
+\frac{\omega}{c}r\lt (N-1)</script><p>因此，该带限声场的边界为</p>
+<script type="math/tex; mode=display">
+r_{N-1}=\frac{N-1}{2\pi}\lambda</script><p>被称为$r_{N-1}$区域。</p>
+<p>截断效应会使得在$r_{N-1}$区域之外的部分声压比精确重现的区域（$r_{N-1}$区域）声压更大，这种现象被称为吉布斯现象（Gibbs phenomenon）。为了消除这种现象，需要进行角加权（angular weighting）（Ahrens and Spors 2009）</p>
+<script type="math/tex; mode=display">
+S(\mathbf{x},\omega)=\sum^{N-1}_{n=0}\sum^n_{m=-n}\breve{\omega}_n\breve{S}^m_nj_n(\frac{\omega}{c}r)Y^m_n(\beta,\alpha)</script><h4 id="2-3-2-外部展开"><a href="#2-3-2-外部展开" class="headerlink" title="2.3.2 外部展开"></a>2.3.2 外部展开</h4><p>假设声源为位于原点的单极子</p>
+<script type="math/tex; mode=display">
+S^m_{n,e}(\omega)= \begin{cases}(-1)^{m+n}i^{-n}\frac{(N-1)!N!}{(N+n)!(N-n-1)!}Y^{-m}_n(\beta_{or},\alpha_{or}) & \ \forall n\le N-1 \\ 0 & \ elsewhere\end{cases}</script><p>$(\alpha_{or},\beta_{or})$为声源的主要辐射方向（Ahrens and Spors 2010）。</p>
+<h3 id="2-4-Signature-Function"><a href="#2-4-Signature-Function" class="headerlink" title="2.4 Signature Function"></a>2.4 Signature Function</h3><p>内部域声场可以表示为一个抽象的单位球表面平面波的叠加</p>
+<script type="math/tex; mode=display">
+S_i(\mathbf{x},\omega)=\frac{1}{4\pi}\int^{2\pi}_0\int^\pi_0\bar{S}_i(\phi,\theta,\omega)e^{-i\mathbf{k}\mathbf{x}}sin\phi d\phi d\theta</script><p>分解系数被称为signature function（Gumerov and Duraiswami）。</p>
+<script type="math/tex; mode=display">
+\bar{S}_i(\phi,\theta,
+\omega)=\sum^\infty_{n=0}\sum^n_{m=-n}i^n\breve{S}^m_{n,i}(\omega)Y^m_n(\phi,\theta)</script><h3 id="2-5-波数域"><a href="#2-5-波数域" class="headerlink" title="2.5 波数域"></a>2.5 波数域</h3><p>声场$S(\mathbf{x},\omega)$的在$x$上的空间傅里叶变换为</p>
+<script type="math/tex; mode=display">
+\tilde{S}(k_x,y,z,\omega)=\int^\infty_{-\infty}S(\mathbf{x},\omega)e^{ik_xx}dx</script><p>即，空间傅里叶域为波数域，也成为k空间。</p>
+<h3 id="2-6-角谱"><a href="#2-6-角谱" class="headerlink" title="2.6 角谱"></a>2.6 角谱</h3><p>假定声场$S(\mathbf{x},\omega)$在任意$y=const$平面上的空间谱表示为</p>
+<script type="math/tex; mode=display">
+S(\mathbf{x},\omega)=\frac{1}{4\pi^2}\iint^\infty_{-\infty}\tilde{S}(k_x,y,k_z,\omega)e^{-i(k_xx+k_zz)}dk_x dk_z</script><p>空间谱下的亥姆霍兹方程</p>
+<script type="math/tex; mode=display">
+\frac{\partial^2}{\partial y^2}\tilde{S}(k_x,y,k_z,\omega)+k^2_y\tilde{S}(k_x,y,k_z,\omega)=0</script><p>其解为</p>
+<script type="math/tex; mode=display">
+\tilde{S}_1(k_x,y,k_z,\omega)=\check{S}_1(k_x,k_z,\omega)e^{ik_yy}\\
+\tilde{S}_2(k_x,y,k_z,\omega)=\check{S}_2(k_x,k_z,\omega)e^{-ik_yy}</script><p>代入可得</p>
+<script type="math/tex; mode=display">
+S(\mathbf{x},\omega)=\frac{1}{4\pi^2}\iint^\infty_{-\infty}\check{S}_1(k_x,k_z,\omega)e^{-i(k_xx+k_yy+k_zz)}dk_x dk_z \\
+S(\mathbf{x},\omega)=\frac{1}{4\pi^2}\iint^\infty_{-\infty}\check{S}_2(k_x,k_z,\omega)e^{-i(k_xx-k_yy+k_zz)}dk_x dk_z</script><p>$\check{S}_1$和$\check{S}_2$被称为角谱。</p>
+<h3 id="2-3-边界条件"><a href="#2-3-边界条件" class="headerlink" title="2.3 边界条件"></a>2.3 边界条件</h3><p>边界条件可以分为两种基本类型：齐次边界条件及非齐次边界条件。齐次边界条件描述的是静止边界，非齐次边界条件描述的是reacting condition。</p>
+<h4 id="2-3-1-狄利克雷边界条件"><a href="#2-3-1-狄利克雷边界条件" class="headerlink" title="2.3.1 狄利克雷边界条件"></a>2.3.1 狄利克雷边界条件</h4><p>狄利克雷边界条件是关于声压的描述。齐次狄利克雷边界为</p>
+<script type="math/tex; mode=display">
+S(\mathbf{x},\omega)=0\ \ \ \ \ \ \forall \in \partial \Omega</script><p>即声压$S(\mathbf{x},\omega)$在边界$\partial \Omega$上为零，也被称之为sound-soft边界。</p>
+<p>非齐次狄利克雷边界条件为</p>
+<script type="math/tex; mode=display">
+S(\mathbf{x},\omega)=F_D(\mathbf{x},\omega)\ \ \ \ \forall x \in \partial \Omega</script><p>即声压$S(\mathbf{x},\omega)$等于在边界$\partial \Omega$上任意平方可积的函数$F_D(\mathbf{x},\omega)$。</p>
+<h4 id="2-3-2-诺伊曼边界条件"><a href="#2-3-2-诺伊曼边界条件" class="headerlink" title="2.3.2 诺伊曼边界条件"></a>2.3.2 诺伊曼边界条件</h4><p>齐次诺伊曼边界条件为</p>
+<script type="math/tex; mode=display">
+\frac{\partial S(\mathbf{x},\omega)}{\partial \mathbf{n}(\mathbf{x})}\Bigg|_{\partial \Omega}=0</script><p>描述了sound-hard boundaries。</p>
+<p>非齐次诺伊曼边界条件为</p>
+<script type="math/tex; mode=display">
+\frac{\partial S(\mathbf{x},\omega)}{\partial \mathbf{n}(\mathbf{x})}\Bigg|_{\partial \Omega}=F_N(\mathbf{x},\omega)\bigg|_{\partial \Omega}</script><h4 id="2-3-3-索莫菲尔德辐射条件"><a href="#2-3-3-索莫菲尔德辐射条件" class="headerlink" title="2.3.3 索莫菲尔德辐射条件"></a>2.3.3 索莫菲尔德辐射条件</h4><p>索莫菲尔德辐射条件（Sommerfield Radiation Condition）</p>
+<script type="math/tex; mode=display">
+\lim_{r\rightarrow +\infty} r\left(\frac{\partial}{\partial r}S(\mathbf{x},\omega)+i\frac{\omega}{c}S(\mathbf{x},\omega)\right)=0</script><p>适用于外部域问题时无限远处的边界条件。</p>
+<h3 id="2-4-格林函数"><a href="#2-4-格林函数" class="headerlink" title="2.4 格林函数"></a>2.4 格林函数</h3><p>非齐次亥姆霍兹方程</p>
+<script type="math/tex; mode=display">
+\nabla_2G(\mathbf{x},\mathbf{x}_0,\omega)+k^2G(\mathbf{x},\mathbf{x}_0,\omega)=-\delta(\mathbf{x}-\mathbf{x}_0)</script><p>的解$G(\mathbf{x},\mathbf{x}_0,\omega)$被称为格林函数，代表了$\mathbf{x}_0$处的狄拉克函数激励产生的响应。<strong>可以理解为格林函数是空间单位冲击响应。</strong></p>
+<p>无源场的格林函数$G_0$仅与$\mathbf{x}$与$\mathbf{x}_0$间的距离有关</p>
+<script type="math/tex; mode=display">
+G_0(\mathbf{x}-\mathbf{x}_0,\omega)=\frac{1}{4\pi}\frac{e^{-i\frac{\omega}{c}}\left|\mathbf{x}-\mathbf{x}_0\right|}{\left|\mathbf{x}-\mathbf{x}_0\right|}</script><p>可被理解为位于$\mathbf{x}_0$的单极子<strong>空间转移函数</strong>。</p>
+<h3 id="2-5-瑞利积分"><a href="#2-5-瑞利积分" class="headerlink" title="2.5 瑞利积分"></a>2.5 瑞利积分</h3><p>时频域无源场下的瑞利第一积分是</p>
+<script type="math/tex; mode=display">
+P(\mathbf{x},\omega)=-\int_{\partial \Omega}2\frac{\partial}{\partial \mathbf{n}}S(\mathbf{x},\omega)\bigg|_{\mathbf{x}-\mathbf{x}_0}\cdot G(\mathbf{x}-\mathbf{x}_0,\omega)dA(\mathbf{x}_0)</script><p>瑞利第一积分的意义是<strong>无源半空间内的声场$S(\mathbf{x},\omega)$由声场在目标半空间法向上的梯度唯一决定。</strong></p>
+<h3 id="2-6-基尔霍夫-亥姆霍兹积分"><a href="#2-6-基尔霍夫-亥姆霍兹积分" class="headerlink" title="2.6 基尔霍夫-亥姆霍兹积分"></a>2.6 基尔霍夫-亥姆霍兹积分</h3><p>对于内部域问题</p>
+<script type="math/tex; mode=display">
+a(\mathbf{x})P(\mathbf{x},\omega)=-\oint_{\partial \Omega}\left(G(\mathbf{x},\mathbf{x}_0,\omega)\frac{\partial}{\partial \mathbf{n}(\mathbf{x}_0)}S(\mathbf{x},\omega)\bigg|_{\mathbf{x}=\mathbf{x}_0} \\-S(\mathbf{x}_0,\omega)\frac{\partial}{\partial \mathbf{n}(\mathbf{x}_0)}G(\mathbf{x},\mathbf{x}_0,\omega) \right)dA(\mathbf{x}_0)</script><p>其中</p>
+<script type="math/tex; mode=display">
+a(\mathbf{x})=\begin{cases}1 & \, if \ \mathbf{x}\in\Omega_i \\ \frac{1}{2} & if \, \mathbf{x}\in \partial \Omega \\ 0 &  if \, \mathbf{x}\in\Omega_e \end{cases}</script><p>$\partial \Omega$为无源空间$\Omega_i$的边界曲面，$\Omega_e$为外部区域。<strong>基尔霍夫-亥姆霍兹积分表示了非齐次边界条件下齐次亥姆霍兹方程的解——由封闭曲面$\partial \Omega$外的声源分布激励产生的声场$S(\mathbf{x},\omega)$由封闭曲面$\partial \Omega$上的声压$S(\mathbf{x},\omega)$及其在法向方向上的梯度唯一确定。</strong></p>
+<p>在自由场条件下，边界$\partial \Omega$可以视作“透明的”，$G(\mathbf{x},\mathbf{x}_0,\omega)$为自由场的格林函数。<strong>自由场下，格林函数$G(\mathbf{x}-\mathbf{x}_0,\omega)$可视为单极子声源的空间转移函数，方向梯度$\partial / (\partial \mathbf{n})G(\cdot)$视为双极子的空间转移函数。</strong></p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%A3%B0%E5%9C%BA/">
+                                    <span class="chip bg-color">声场</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%89%A9%E7%90%86/">
+                                    <span class="chip bg-color">物理</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,wechat,weibo" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2019/08/10/kong-jian-ding-wei-gan-zhi-ji-zhi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="空间定位感知机制">
+                        
+                        <span class="card-title">空间定位感知机制</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-08-10
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            lvmaster
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%A9%BA%E9%97%B4%E9%9F%B3%E9%A2%91/">
+                        <span class="chip bg-color">空间音频</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/07/31/sheng-chang-de-wu-li-ji-chu/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="声场的物理基础">
+                        
+                        <span class="card-title">声场的物理基础</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-07-31
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            lvmaster
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%A3%B0%E5%9C%BA/">
+                        <span class="chip bg-color">声场</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%89%A9%E7%90%86/">
+                        <span class="chip bg-color">物理</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2021</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">lvmaster</a>
+            <br>
+            
+            
+            
+            
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link ">
+
+
+    <a href="mailto:lvmaster@outlook.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1471598369" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1471598369" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
